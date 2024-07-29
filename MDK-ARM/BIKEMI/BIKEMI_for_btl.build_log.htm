@@ -1,0 +1,146 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Anton Bat, str, LIC=V85FJ-UI2FS-E03N4-F3F2J-UPX10-SXZNM
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.36.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.4.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TARMCM1.DLL V1.14.4.0
+ 
+<h2>Project:</h2>
+E:\Git_soft\KEBI_app\MDK-ARM\BIKEMI_for_btl.uvprojx
+Project File Date:  10/31/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'BIKEMI_for_btl'
+compiling settings.c...
+..\Core\Src\settings.c(11): warning:  #188-D: enumerated type mixed with another type
+  work_mode_t_m current_work_mode=0;
+..\Core\Src\settings.c(12): warning:  #188-D: enumerated type mixed with another type
+  work_mode_t_m previous_work_mode=0;
+..\Core\Src\settings.c(13): warning:  #188-D: enumerated type mixed with another type
+  control_source_t_m current_control_source=0;
+..\Core\Src\settings.c(14): warning:  #188-D: enumerated type mixed with another type
+  control_source_t_m previous_control_source=0;
+..\Core\Src\settings.c(279): warning:  #186-D: pointless comparison of unsigned integer with zero
+  	if(strct.pass_convert_count<PASS_CONVERT_COUNT_MIN || strct.pass_convert_count>PASS_CONVERT_COUNT_MAX) return 2;
+..\Core\Src\settings.c(295): warning:  #186-D: pointless comparison of unsigned integer with zero
+    case INDEX_CONTROL_SOURCE:    if(value>=CONTROL_SOURCE_MIN_VALUE &&   value<=CONTROL_SOURCE_MAX_VALUE)  {Settings_struct.control_source = value; return 0;}   else return 1; break;
+..\Core\Src\settings.c(295): warning:  #111-D: statement is unreachable
+    case INDEX_CONTROL_SOURCE:    if(value>=CONTROL_SOURCE_MIN_VALUE &&   value<=CONTROL_SOURCE_MAX_VALUE)  {Settings_struct.control_source = value; return 0;}   else return 1; break;
+..\Core\Src\settings.c(296): warning:  #111-D: statement is unreachable
+    case INDEX_COIL_STATE:    if(value>=COIL_STATE_MIN_VALUE &&   value<=COIL_STATE_MAX_VALUE)    return 0;          else return 1; break;
+..\Core\Src\settings.c(302): warning:  #1-D: last line of file ends without a newline
+  //----
+..\Core\Src\settings.c: 9 warnings, 0 errors
+compiling pc_communication.c...
+../Core/Inc/pc_communication.h(37): warning:  #1-D: last line of file ends without a newline
+  #endif  //PC_COMMUNICATION_H
+..\Core\Src\pc_communication.c(59): warning:  #111-D: statement is unreachable
+    case COMMAND_CONNECTION:              return AnswerStartCommunication_19(buf); break;
+..\Core\Src\pc_communication.c(60): warning:  #111-D: statement is unreachable
+    case COMMAND_READ_ALL_SETTINGS:       return ReadAndSendAllSettings(buf); break;
+..\Core\Src\pc_communication.c(61): warning:  #111-D: statement is unreachable
+    case COMMAND_WRITE_SETTINGS_STRUCT:		return AnswerWriteSettingStruct(buf); break;
+..\Core\Src\pc_communication.c(62): warning:  #111-D: statement is unreachable
+    case COMMAND_RESET_MCU:               return AnswerRsetMCU(); break;    
+..\Core\Src\pc_communication.c(63): warning:  #111-D: statement is unreachable
+    default: return 0; break;
+..\Core\Src\pc_communication.c(99): warning:  #111-D: statement is unreachable
+  	FLASH_Lock();
+..\Core\Src\pc_communication.c(104): warning:  #1-D: last line of file ends without a newline
+  //-----
+..\Core\Src\pc_communication.c: 8 warnings, 0 errors
+compiling modbus.c...
+../Core/Inc/pc_communication.h(37): warning:  #1-D: last line of file ends without a newline
+  #endif  //PC_COMMUNICATION_H
+..\Core\Src\modbus.c(19): warning:  #1295-D: Deprecated declaration LL_TIM_EnableCounter - give arg types
+  extern void LL_TIM_EnableCounter();
+..\Core\Src\modbus.c(136): warning:  #186-D: pointless comparison of unsigned integer with zero
+    if(start_read_adress>=DO_OBJECTS)
+..\Core\Src\modbus.c(332): warning:  #186-D: pointless comparison of unsigned integer with zero
+    if(start_read_adress>=DO_OBJECTS)
+..\Core\Src\modbus.c(387): warning:  #550-D: variable "n"  was set but never used
+    unsigned int m=0,n=0;
+..\Core\Src\modbus.c(388): warning:  #177-D: variable "tmp_val"  was declared but never referenced
+    int tmp_val,tmp_val_pos;
+..\Core\Src\modbus.c(388): warning:  #177-D: variable "tmp_val_pos"  was declared but never referenced
+    int tmp_val,tmp_val_pos;
+..\Core\Src\modbus.c(517): warning:  #1-D: last line of file ends without a newline
+  }
+..\Core\Src\modbus.c: 8 warnings, 0 errors
+compiling algorithm.c...
+../Core/Inc/algorithm.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif // ALGORITHM_H
+algorithm.c(5): warning:  #188-D: enumerated type mixed with another type
+  device_status_t_m current_device_status=0;
+algorithm.c(6): warning:  #188-D: enumerated type mixed with another type
+  device_status_t_m previous_device_status=0;
+algorithm.c(7): warning:  #188-D: enumerated type mixed with another type
+  mosfet_status_t_m current_mosfet_status=0;
+algorithm.c(8): warning:  #188-D: enumerated type mixed with another type
+  mosfet_status_t_m previous_mosfet_status=0;
+algorithm.c(9): warning:  #188-D: enumerated type mixed with another type
+  coil_status_t_m current_coil_status=0;
+algorithm.c(10): warning:  #188-D: enumerated type mixed with another type
+  coil_status_t_m previous_coil_status=0;
+algorithm.c(11): warning:  #188-D: enumerated type mixed with another type
+  btn_status_t_m current_btn_state=0;
+algorithm.c(23): warning:  #111-D: statement is unreachable
+  		case MODBUS_CONTROL: return; break;
+algorithm.c(26): warning:  #1-D: last line of file ends without a newline
+  }
+algorithm.c: 10 warnings, 0 errors
+compiling main.c...
+../Core/Src/main.c(37): warning:  #188-D: enumerated type mixed with another type
+  coil_state_t_m current_coil_state=0;
+../Core/Src/main.c(38): warning:  #188-D: enumerated type mixed with another type
+  coil_state_t_m previous_coil_state=0;
+../Core/Src/main.c: 2 warnings, 0 errors
+compiling usart.c...
+compiling stm32f0xx_it.c...
+linking...
+Program Size: Code=12712 RO-data=308 RW-data=64 ZI-data=2260  
+FromELF: creating hex file...
+"BIKEMI\BIKEMI_for_btl.axf" - 0 Error(s), 37 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F0xx_DFP.2.1.1.pack
+                Keil.STM32F0xx_DFP.2.1.1
+                STMicroelectronics STM32F0 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_BIKEMI_for_btl
+  C:\Users\engl5\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include
+  C:\Users\engl5\AppData\Local\Arm\Packs\Keil\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+      Include file:  CMSIS\Core\Include\tz_context.h
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>
